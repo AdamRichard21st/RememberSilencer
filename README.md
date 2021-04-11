@@ -1,6 +1,6 @@
 # Description
 
-This plugin remembers if players had silence attached to M4 or USP once they get it again. Specially useful for deathmatches mods.
+This plugin remembers if players had silencer attached to M4 or USP once they get it again. Specially useful for deathmatch based mods.
 
 
 # Installation
