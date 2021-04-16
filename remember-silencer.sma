@@ -5,7 +5,7 @@
 
 
 // whenever user has silencer attached to the weapon
-public bool:bSilent[33][CSW_P90 + 1];
+public bool:bSilent[33][CSW_M4A1 + 1];
 
 
 
@@ -20,6 +20,14 @@ public plugin_init()
     // listen to when m4/usp secondary function is triggered
     RegisterHam(Ham_Weapon_SecondaryAttack, "weapon_m4a1", "CBasePlayerWeapon_SecondaryAttack", .Post = true);
     RegisterHam(Ham_Weapon_SecondaryAttack, "weapon_usp", "CBasePlayerWeapon_SecondaryAttack", .Post = true);
+}
+
+
+public client_putinserver(id)
+{
+    // resets user silencer preferences
+    bSilent[id][CSW_M4A1] = false;
+    bSilent[id][CSW_USP] = false;
 }
 
 
